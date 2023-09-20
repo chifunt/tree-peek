@@ -29,7 +29,7 @@ def copy_to_clipboard():
     app.clipboard_append(content)
 
 app = tk.Tk()
-app.title("Directory Structure Viewer")
+app.title("TreePeek")
 
 # Frame to hold both buttons
 frame_buttons = tk.Frame(app)
