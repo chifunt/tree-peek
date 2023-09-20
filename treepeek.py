@@ -40,18 +40,23 @@ color_primary = "#519872"
 color_secondary = "#3B5249"
 color_text = "#FFFFFF"
 color_disabled = "#34252F"
+font_tuple = ("Roboto", 25)
 
 # Frame to hold both buttons
 frame_buttons = tk.Frame(app)
 frame_buttons.pack(pady=(20, 0))
 
 # Select Directory button
-btn_select_dir = ctk.CTkButton(frame_buttons, text="Select Directory", command=show_structure, fg_color=color_primary, hover_color=color_secondary, text_color=color_text)
-btn_select_dir.grid(row=0, column=0, padx=(0, 10))  # Some padding between the buttons
+btn_select_dir = ctk.CTkButton(frame_buttons, text="Select Directory", command=show_structure, 
+                               fg_color=color_primary, hover_color=color_secondary, 
+                               text_color=color_text, font=font_tuple)
+btn_select_dir.grid(row=0, column=0, padx=(0, 10), pady=(0, 5))
 
 # Copy button
-btn_copy = ctk.CTkButton(frame_buttons, text="Copy", command=copy_to_clipboard, state=tk.DISABLED, fg_color=color_primary, hover_color=color_secondary, text_color=color_text, text_color_disabled=color_disabled)
-btn_copy.grid(row=0, column=1)
+btn_copy = ctk.CTkButton(frame_buttons, text="Copy", command=copy_to_clipboard, state=tk.DISABLED, 
+                         fg_color=color_primary, hover_color=color_secondary, 
+                         text_color=color_text, text_color_disabled=color_disabled, font=font_tuple)
+btn_copy.grid(row=0, column=1, pady=(0, 5))
 
 # Frame to hold the Text widget and its Scrollbar
 frame_txt_display = tk.Frame(app)
