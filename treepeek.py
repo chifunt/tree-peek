@@ -7,7 +7,7 @@ def print_dir_structure(path='.', level=0):
     """Recursively print the structure of the directory in Markdown format."""
     output = ''
     output += '    ' * level + '* ' + os.path.basename(path) + '\n'
-    
+
     if os.path.isdir(path):
         for child in os.listdir(path):
             child_path = os.path.join(path, child)
