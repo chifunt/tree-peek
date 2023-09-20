@@ -26,7 +26,7 @@ app = tk.Tk()
 app.title("Directory Structure Viewer")
 
 btn_select_dir = ctk.CTkButton(app, text="Select Directory", command=show_structure)
-btn_select_dir.pack(pady=20)
+btn_select_dir.pack(pady=(20, 0))
 
 # Frame to hold the Text widget and its Scrollbar
 frame_txt_display = tk.Frame(app)
