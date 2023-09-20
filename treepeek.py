@@ -41,11 +41,11 @@ frame_buttons = tk.Frame(app)
 frame_buttons.pack(pady=(20, 0))
 
 # Select Directory button
-btn_select_dir = ctk.CTkButton(frame_buttons, text="Select Directory", command=show_structure)
+btn_select_dir = ctk.CTkButton(frame_buttons, text="Select Directory", command=show_structure, fg_color="green")
 btn_select_dir.grid(row=0, column=0, padx=(0, 10))  # Some padding between the buttons
 
 # Copy button
-btn_copy = ctk.CTkButton(frame_buttons, text="Copy", command=copy_to_clipboard, state=tk.DISABLED)
+btn_copy = ctk.CTkButton(frame_buttons, text="Copy", command=copy_to_clipboard, state=tk.DISABLED, fg_color="green")
 btn_copy.grid(row=0, column=1)
 
 # Frame to hold the Text widget and its Scrollbar
