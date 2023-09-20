@@ -38,7 +38,7 @@ app.title("TreePeek")
 
 color_primary = "#519872"
 color_secondary = "#3B5249"
-color_text = "#FFFFFF"
+color_text = "#F0F4EF"
 color_disabled = "#34252F"
 font_tuple = ("Roboto", 25)
 
