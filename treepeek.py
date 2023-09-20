@@ -53,6 +53,11 @@ frame_txt_display = tk.Frame(app)
 frame_txt_display.pack(padx=20, pady=20, fill=tk.BOTH, expand=True)
 
 txt_display = tk.Text(frame_txt_display, wrap=tk.WORD, width=80, height=20)
+
+# Insert placeholder message and disable the widget for user edits
+txt_display.insert(tk.END, "Please select a directory to view its structure.")
+txt_display.config(state=tk.DISABLED)
+
 txt_display.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 # Vertical Scrollbar for txt_display
