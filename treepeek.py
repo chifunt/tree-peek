@@ -18,9 +18,14 @@ def show_structure():
     dir_path = filedialog.askdirectory(title="Select Directory")
     if not dir_path:
         return
+
     structure = print_dir_structure(dir_path)
+
+    txt_display.config(state=tk.NORMAL)  # Enable editing
     txt_display.delete(1.0, tk.END)
     txt_display.insert(tk.END, structure)
+    txt_display.config(state=tk.DISABLED)  # Disable editing
+
     btn_copy.configure(state=tk.NORMAL)
 
 def copy_to_clipboard():
