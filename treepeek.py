@@ -36,16 +36,21 @@ def copy_to_clipboard():
 app = tk.Tk()
 app.title("TreePeek")
 
+color_primary = "#519872"
+color_secondary = "#3B5249"
+color_text = "#FFFFFF"
+color_disabled = "#34252F"
+
 # Frame to hold both buttons
 frame_buttons = tk.Frame(app)
 frame_buttons.pack(pady=(20, 0))
 
 # Select Directory button
-btn_select_dir = ctk.CTkButton(frame_buttons, text="Select Directory", command=show_structure, fg_color="green")
+btn_select_dir = ctk.CTkButton(frame_buttons, text="Select Directory", command=show_structure, fg_color=color_primary, hover_color=color_secondary, text_color=color_text)
 btn_select_dir.grid(row=0, column=0, padx=(0, 10))  # Some padding between the buttons
 
 # Copy button
-btn_copy = ctk.CTkButton(frame_buttons, text="Copy", command=copy_to_clipboard, state=tk.DISABLED, fg_color="green")
+btn_copy = ctk.CTkButton(frame_buttons, text="Copy", command=copy_to_clipboard, state=tk.DISABLED, fg_color=color_primary, hover_color=color_secondary, text_color=color_text, text_color_disabled=color_disabled)
 btn_copy.grid(row=0, column=1)
 
 # Frame to hold the Text widget and its Scrollbar
