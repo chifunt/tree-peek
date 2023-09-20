@@ -50,13 +50,13 @@ frame_buttons.pack(pady=(20, 0))
 btn_select_dir = ctk.CTkButton(frame_buttons, text="Select Directory", command=show_structure, 
                                fg_color=color_primary, hover_color=color_secondary, 
                                text_color=color_text, font=font_tuple)
-btn_select_dir.grid(row=0, column=0, padx=(0, 10), pady=(0, 5))
+btn_select_dir.grid(row=0, column=0, padx=(0,50))
 
 # Copy button
 btn_copy = ctk.CTkButton(frame_buttons, text="Copy", command=copy_to_clipboard, state=tk.DISABLED, 
                          fg_color=color_primary, hover_color=color_secondary, 
                          text_color=color_text, text_color_disabled=color_disabled, font=font_tuple)
-btn_copy.grid(row=0, column=1, pady=(0, 5))
+btn_copy.grid(row=0, column=1)
 
 # Frame to hold the Text widget and its Scrollbar
 frame_txt_display = tk.Frame(app)
