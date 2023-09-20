@@ -4,9 +4,9 @@ from tkinter import filedialog
 import customtkinter as ctk
 
 def print_dir_structure(path='.', level=0):
-    """Recursively print the structure of the directory."""
+    """Recursively print the structure of the directory in Markdown format."""
     output = ''
-    output += '  ' * level + '|-- ' + os.path.basename(path) + '\n'
+    output += '    ' * level + '* ' + os.path.basename(path) + '\n'
     
     if os.path.isdir(path):
         for child in os.listdir(path):
